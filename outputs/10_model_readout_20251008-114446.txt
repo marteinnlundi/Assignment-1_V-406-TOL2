@@ -1,0 +1,82 @@
+Model: log(Profits) ~ log(AreaPop) + Staff_FTE + Turnover_rate2 + Staff_mean_experience2 + Branch_size + Urban
+
+
+Call:
+lm(formula = log_profits ~ log_area_pop + staff_fte + turnover_rate2 + 
+    staff_mean_experience2 + branch_size + urban, data = ff)
+
+Residuals:
+      Min        1Q    Median        3Q       Max 
+-0.123648 -0.047526 -0.001615  0.064338  0.163280 
+
+Coefficients:
+                        Estimate Std. Error t value Pr(>|t|)    
+(Intercept)             1.961052   0.573876   3.417  0.00307 ** 
+log_area_pop            0.675907   0.072406   9.335 2.55e-08 ***
+staff_fte               0.045424   0.008463   5.368 4.22e-05 ***
+turnover_rate2         -0.154596   0.356209  -0.434  0.66944    
+staff_mean_experience2  0.002920   0.007595   0.385  0.70509    
+branch_sizeSmall       -0.023314   0.086105  -0.271  0.78966    
+branch_sizeLarge        0.053660   0.076789   0.699  0.49361    
+urbanYes               -0.004152   0.074027  -0.056  0.95589    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Residual standard error: 0.09262 on 18 degrees of freedom
+Multiple R-squared:  0.9679,	Adjusted R-squared:  0.9554 
+F-statistic: 77.43 on 7 and 18 DF,  p-value: 3.859e-12
+
+
+Breusch-Pagan test:
+
+	studentized Breusch-Pagan test
+
+data:  best
+BP = 8.693, df = 7, p-value = 0.2755
+
+
+VIF:
+                           GVIF Df GVIF^(1/(2*Df))
+log_area_pop           1.900469  1        1.378575
+staff_fte              7.853533  1        2.802415
+turnover_rate2         1.828366  1        1.352171
+staff_mean_experience2 3.643597  1        1.908821
+branch_size            9.562923  2        1.758521
+urban                  3.930751  1        1.982612
+
+Robust (HC3) coefficients:
+
+t test of coefficients:
+
+                         Estimate Std. Error t value  Pr(>|t|)    
+(Intercept)             1.9610525  0.8513068  2.3036  0.033385 *  
+log_area_pop            0.6759071  0.1064147  6.3516 5.529e-06 ***
+staff_fte               0.0454244  0.0147777  3.0738  0.006543 ** 
+turnover_rate2         -0.1545955  0.4233505 -0.3652  0.719239    
+staff_mean_experience2  0.0029204  0.0123257  0.2369  0.815381    
+branch_sizeSmall       -0.0233139  0.1399019 -0.1666  0.869507    
+branch_sizeLarge        0.0536595  0.0931040  0.5763  0.571523    
+urbanYes               -0.0041523  0.1170685 -0.0355  0.972096    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+
+
+Model selection summary (AIC/BIC/adjR2):
+# A tibble: 3 × 4
+  model             AIC   BIC adjR2
+  <chr>           <dbl> <dbl> <dbl>
+1 m1_full         -47.0 -33.2 0.965
+2 m2_parsimonious -41.5 -30.2 0.955
+3 m3_int_exp      -48.4 -34.5 0.967
+
+
+Influence refit stability (key coefs):
+# A tibble: 5 × 3
+  id    log_area_pop staff_fte
+  <chr>        <dbl>     <dbl>
+1 all          0.676    0.0454
+2 13           0.659    0.0369
+3 18           0.678    0.0453
+4 21           0.661    0.0561
+5 26           0.761    0.0433

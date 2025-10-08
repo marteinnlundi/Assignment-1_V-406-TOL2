@@ -1,0 +1,13 @@
+Potentially influential observations of
+	 lm(formula = log_profits ~ log_area_pop + staff_fte + turnover_rate2 +      staff_mean_experience2 + branch_size + urban, data = ff) :
+
+   dfb.1_  dfb.lg__ dfb.stf_ dfb.tr_2 dfb.s__2 dfb.br_S dfb.br_L dfb.urbY
+13 -0.84    0.24     1.07_*   0.73     0.60     0.86    -0.33    -0.48   
+18  0.04   -0.03     0.01     0.05    -0.03     0.04    -0.02    -0.03   
+21 -0.05    0.22    -1.32_*   0.22     0.50    -0.94     0.88     0.43   
+26  1.06_* -1.43_*   0.31    -0.51     1.28_*   0.80    -0.41     1.34_* 
+   dffit   cov.r   cook.d hat  
+13 -1.82    0.84    0.37   0.51
+18  0.10    3.06_*  0.00   0.49
+21 -1.57    0.88    0.28   0.47
+26  3.22_*  0.09    0.88   0.52

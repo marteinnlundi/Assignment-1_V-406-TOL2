@@ -1,0 +1,14 @@
+    profits      log_profits       area_pop     log_area_pop   turnover_rate1  
+ Min.   :2232   Min.   :7.711   Min.   :1847   Min.   :7.521   Min.   :0.1481  
+ 1st Qu.:4689   1st Qu.:8.452   1st Qu.:3691   1st Qu.:8.212   1st Qu.:0.2339  
+ Median :6483   Median :8.775   Median :4504   Median :8.413   Median :0.3313  
+ Mean   :6360   Mean   :8.675   Mean   :4655   Mean   :8.389   Mean   :0.3315  
+ 3rd Qu.:8356   3rd Qu.:9.031   3rd Qu.:5324   3rd Qu.:8.579   3rd Qu.:0.3849  
+ Max.   :9663   Max.   :9.176   Max.   :7670   Max.   :8.945   Max.   :0.5970  
+ turnover_rate2   
+ Min.   :0.07812  
+ 1st Qu.:0.17708  
+ Median :0.22839  
+ Mean   :0.22003  
+ 3rd Qu.:0.25918  
+ Max.   :0.37313  

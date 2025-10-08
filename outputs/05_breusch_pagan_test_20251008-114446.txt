@@ -1,0 +1,6 @@
+
+	studentized Breusch-Pagan test
+
+data:  best
+BP = 8.693, df = 7, p-value = 0.2755
+

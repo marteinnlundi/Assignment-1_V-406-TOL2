@@ -1,0 +1,44 @@
+=== Robust model comparison (HC3): best vs best+interaction ===
+Wald test
+
+Model 1: log_profits ~ log_area_pop + staff_fte + turnover_rate2 + staff_mean_experience2 + 
+    branch_size + urban
+Model 2: log_profits ~ log_area_pop + staff_fte + turnover_rate2 + staff_mean_experience2 + 
+    branch_size + urban + log_area_pop:urban
+  Res.Df Df  Chisq Pr(>Chisq)
+1     18                     
+2     17  1 0.6652     0.4147
+
+=== Robust test for interaction term (contrast-matrix) ===
+Detected interaction coefficient: log_area_pop:urbanYes 
+
+Linear hypothesis test:
+log_area_pop:urbanYes = 0
+
+Model 1: restricted model
+Model 2: log_profits ~ log_area_pop + staff_fte + turnover_rate2 + staff_mean_experience2 + 
+    branch_size + urban + log_area_pop:urban
+
+Note: Coefficient covariance matrix supplied.
+
+  Res.Df Df      F Pr(>F)
+1     18                 
+2     17  1 0.6652  0.426
+
+=== Robust coefficient table for interaction model (for reference) ===
+
+t test of coefficients:
+
+                         Estimate Std. Error t value Pr(>|t|)   
+(Intercept)             2.7249188  1.5675420  1.7383 0.100228   
+log_area_pop            0.5982109  0.1852009  3.2301 0.004919 **
+staff_fte               0.0419512  0.0134507  3.1189 0.006246 **
+turnover_rate2         -0.2447858  0.4488473 -0.5454 0.592587   
+staff_mean_experience2  0.0013035  0.0104206  0.1251 0.901920   
+branch_sizeSmall       -0.0675981  0.1330767 -0.5080 0.618006   
+branch_sizeLarge        0.0881226  0.0923820  0.9539 0.353505   
+urbanYes               -1.5381035  1.8618507 -0.8261 0.420182   
+log_area_pop:urbanYes   0.1820423  0.2232017  0.8156 0.426012   
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
