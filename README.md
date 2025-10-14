@@ -81,10 +81,3 @@ All variable names are cleaned to `snake_case` using `janitor::clean_names()`.
 * Robustness, influence, and “what-if” scenario analysis
 
 Everything is stored automatically — **no manual saving or printing needed**.
-
----
-
-## Assignment reminder
-
-Use this project for your 4–6 page report.
-Explain your exploratory analysis, final model choice, coefficient interpretation, and diagnostic conclusions.
